@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/custom/navigation";
 import { ThemeProvider } from "../providers/theme-providers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,10 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="h-full">
-            <Navigation />
-            {children}
-          </main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

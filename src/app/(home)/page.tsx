@@ -50,7 +50,7 @@ export default function Home() {
 
       <footer className="bg-foreground text-muted py-4">
         <div className="container mx-auto text-center">
-          <p>&copy; 2024 Doação de Sangue. Todos os direitos reservados.</p>
+          <p>&copy; 2024 Doadores 360. Todos os direitos reservados.</p>
         </div>
       </footer>
     </>

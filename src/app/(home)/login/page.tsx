@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -13,7 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 type Props = {};
 
@@ -23,6 +24,8 @@ const formSchema = z.object({
 });
 
 const LoginPage = (props: Props) => {
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,7 +36,7 @@ const LoginPage = (props: Props) => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     // WIP: Implement login logic
-    console.log(values);
+    router.push("/dashboard");
   };
 
   return (

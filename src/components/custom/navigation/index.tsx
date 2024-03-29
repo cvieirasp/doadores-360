@@ -10,9 +10,11 @@ type Props = {
 const Navigation = (props: Props) => {
   return (
     <div className="p-4 flex items-center justify-between relative">
-      <aside className="flex items-center gap-2">
-        <Image src="/next.svg" width={50} height={50} alt="Logo" />
-        <span className="text-xl font-bold">Doadores 360</span>
+      <aside>
+        <Link className="flex items-center gap-2" href="/">
+          <Image src="/next.svg" width={50} height={50} alt="Logo" />
+          <span className="text-xl font-bold">Doadores 360</span>
+        </Link>
       </aside>
       <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
         <ul className="flex items-center justify-center gap-8">
@@ -45,7 +47,7 @@ const Navigation = (props: Props) => {
       <aside className="flex items-center gap-2">
         <Link
           className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80 transition duration-300"
-          href={"#"}
+          href="/login"
         >
           Login
         </Link>
